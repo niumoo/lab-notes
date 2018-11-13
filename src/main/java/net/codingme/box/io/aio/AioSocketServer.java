@@ -20,6 +20,11 @@ import java.util.concurrent.ThreadPoolExecutor;
  * AIO异步通信
  * <p>
  * Java 异步IO
+ * 在java的N-IO框架中，需要使用一个重要的selector负责代替应用查询已注册的通道，用于IO事件轮训，
+ * 管理通道集合等。
+ *
+ * A-IO中不是“轮训”方式，而是订阅-通知的方式，所以不需要`selector`了，channel通道可以直接注册
+ * 监听到操作系统。
  *
  * @Author niujinpeng
  * @Date 2018/10/28 15:58
