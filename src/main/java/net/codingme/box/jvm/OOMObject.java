@@ -1,7 +1,5 @@
 package net.codingme.box.jvm;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +15,7 @@ public class OOMObject {
     public static void fillHeap(int num) throws InterruptedException {
         List<OOMObject> list = new ArrayList<OOMObject>();
         for (int i = 0; i < num; i++) {
-            //稍作延时,令监视曲线的变化更加明显
+            // 稍作延时,令监视曲线的变化更加明显
             Thread.sleep(50);
             list.add(new OOMObject());
         }
@@ -25,7 +23,13 @@ public class OOMObject {
     }
 
     public static void main(String[] args) throws Exception {
-        fillHeap(1000);
+        // fillHeap(1000);
+
+        // OutOfMemoryError
+        // List<OOMObject> list = new ArrayList<OOMObject>();
+        // while (true){
+        // list.add(new OOMObject());
+        // }
     }
 
 }
