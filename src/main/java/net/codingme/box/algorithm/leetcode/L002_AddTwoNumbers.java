@@ -1,6 +1,4 @@
-package net.codingme.box.leetcode;
-
-import java.math.BigDecimal;
+package net.codingme.box.algorithm.leetcode;
 
 /**
  * <p>

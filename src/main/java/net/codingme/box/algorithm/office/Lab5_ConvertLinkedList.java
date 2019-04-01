@@ -1,4 +1,4 @@
-package net.codingme.box.office;
+package net.codingme.box.algorithm.office;
 
 import java.util.Stack;
 

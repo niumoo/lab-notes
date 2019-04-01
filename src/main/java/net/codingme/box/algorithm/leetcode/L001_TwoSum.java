@@ -1,6 +1,5 @@
-package net.codingme.box.leetcode;
+package net.codingme.box.algorithm.leetcode;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 /**

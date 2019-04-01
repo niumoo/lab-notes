@@ -1,4 +1,4 @@
-package net.codingme.box.lombok;
+package net.codingme.box.lab;
 
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
