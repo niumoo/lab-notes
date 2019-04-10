@@ -1,11 +1,9 @@
-package net.codingme.box.controller;
+package net.codingme.box.goodskill.controller;
 
-import net.codingme.box.service.SkillService;
+import net.codingme.box.goodskill.service.SkillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
 
 /**
  * <p>

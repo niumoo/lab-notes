@@ -1,8 +1,9 @@
-package net.codingme.box.utils;
+package net.codingme.box.goodskill.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
+import java.util.UUID;
 
 /**
  * <p>
@@ -23,6 +24,15 @@ public class KeyUtil {
         Random random = new Random();
         Integer randNumber = random.nextInt(900000) + 100000;
         return sdf.format(new Date()) + String.valueOf(randNumber);
+    }
+
+    public static void main(String[] args) {
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < 1000000; i++) {
+            System.out.println(UUID.randomUUID());
+        }
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
     }
 
 }

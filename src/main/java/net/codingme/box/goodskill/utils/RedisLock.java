@@ -1,4 +1,4 @@
-package net.codingme.box.utils;
+package net.codingme.box.goodskill.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * <p>
- * 分布式锁的实现
+ * Redis 分布式锁的实现
  *
  * @Author niujinpeng
  * @Date 2019/3/20 14:54

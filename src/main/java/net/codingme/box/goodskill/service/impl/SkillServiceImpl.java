@@ -1,12 +1,11 @@
-package net.codingme.box.service.impl;
+package net.codingme.box.goodskill.service.impl;
 
-import net.codingme.box.service.SkillService;
-import net.codingme.box.utils.KeyUtil;
-import net.codingme.box.utils.RedisLock;
+
+import net.codingme.box.goodskill.utils.RedisLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.security.Key;
+import net.codingme.box.goodskill.service.SkillService;
+import net.codingme.box.goodskill.utils.KeyUtil;
 import java.util.HashMap;
 import java.util.Map;
 
