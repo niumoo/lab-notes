@@ -7,7 +7,7 @@ import java.util.Stack;
 
 /**
  * <p>
- * 二叉树测试
+ * 二叉树的遍历测试
  *
  * @Author niujinpeng
  * @Date 2019/4/10 10:33

@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
+ * 简单的商品秒杀
+ * </p>
  *
  * @Author niujinpeng
  * @Date 2019/3/20 11:33

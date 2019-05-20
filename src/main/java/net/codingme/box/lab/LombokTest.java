@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * <p>
- * LomBok使用
+ * LomBok 的使用测试
  *
  * @Author niujinpeng
  * @Date 2018/12/10 11:05
@@ -37,12 +37,12 @@ public class LombokTest {
  * @EqualsAndHashCode 生成 equals 和 hashCode 方法。
  * @NoArgsConstructor 生成无惨构造器。
  * @AllArgsConstructor 生成全参数构造器。
- * @Data 是一个方便注解，它捆绑了 @ToString @Getter/@Setter  @EqualsAndHashCode 以及 @RequiredArgsConstructor.
+ * @Data 是一个方便注解，它捆绑了 @ToString @Getter/@Setter @EqualsAndHashCode 以及 @RequiredArgsConstructor.
  */
-//@Getter
-//@Setter
-//@ToString
-//@EqualsAndHashCode
+// @Getter
+// @Setter
+// @ToString
+// @EqualsAndHashCode
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

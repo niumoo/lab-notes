@@ -2,7 +2,7 @@ package net.codingme.box.lab;
 
 /**
  * <p>
- * 判断一个数字是否是奇书
+ * 判断一个数字是否是奇数
  *
  * @Author niujinpeng
  * @Date 2019/3/25 12:00
