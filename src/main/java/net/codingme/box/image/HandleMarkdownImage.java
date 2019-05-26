@@ -30,7 +30,7 @@ public class HandleMarkdownImage {
     /**
      * 图片本地备份路径
      */
-    public static String IMAGE_SAVE_PATH = "f:/static-image3/";
+    public static String IMAGE_SAVE_PATH = "f:/static-image/";
     /**
      * 存放到 Github 仓库的路径前缀
      */
