@@ -1,4 +1,4 @@
-# Java-ToolBox
+# Java-LabNotes
 
 ## IO通信
 [同步阻塞模式(Blocking IO)](https://github.com/niumoo/java-toolbox/tree/master/src/main/java/net/codingme/box/io/bio)  
