@@ -11,4 +11,4 @@
 
 [Markdown 图片解析](https://github.com/niumoo/lab-notes/tree/master/src/main/java/net/codingme/box/image)
 
-[字符图片生成](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/box/lab/GeneratorTextImage.java)
+[图片转字符图案](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/box/lab/GeneratorTextImage.java)
