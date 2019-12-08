@@ -8,8 +8,8 @@
 [Java 图片转字符图案](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/box/lab/GeneratorTextImage.java)  
 
 
-[Arthas 使用案例](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/arthas)  
-
+[Arthas Java 性能分析工具使用案例](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/arthas)  
+[async-profiler 性能分析工具使用案例](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/arthas/HotCode.java)
 
 
 ## 交流
