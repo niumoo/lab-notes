@@ -20,6 +20,6 @@ jobs:
         access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
     - name: 删除冗余文件
       run: ossutil rm oss://wdbyte/ -rf
-      if: github.event_name == 'schedule'
+     # if: github.event_name == 'schedule'
     - name: 复制文件到阿里云OSS
       run: ossutil cp -rf . oss://wdbyte/
