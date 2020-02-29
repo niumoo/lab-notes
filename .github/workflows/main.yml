@@ -14,7 +14,6 @@ jobs:
     - uses: actions/checkout@v1
       with:
         submodules: true
-    - uses: pwd
     - uses: ls -l
     # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
     - name: setup aliyun oss
