@@ -48,6 +48,6 @@ jobs:
       run: ossutil rm oss://shanyue-blog/assets -rf
       if: github.event_name == 'schedule'
     - name: 复制文件到阿里云OSS
-      run: ossutil cp -rf .vuepress/dist oss://shanyue-blog/
+      run: ossutil cp -rf .vuepress/dist oss://wdbyte/
     - name: 设置永久缓存
-      run: ossutil set-meta oss://shanyue-blog/assets cache-control:"max-age=31536000" --update -rf
+      run: ossutil set-meta oss://wdbyteg/ cache-control:"max-age=31536000" --update -rf
