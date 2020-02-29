@@ -18,7 +18,7 @@ jobs:
       run: |
         pwd
         ls -l
-        rm -rf .github/*
+        rm -rf .git*
     # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
     - name: setup aliyun oss
       uses: manyuanrong/setup-ossutil@master
