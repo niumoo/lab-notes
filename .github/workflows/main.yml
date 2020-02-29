@@ -29,4 +29,4 @@ jobs:
       run: ossutil rm oss://wdbyte/ -rf
       #if: github.event_name == 'schedule'
     - name: 复制文件到阿里云OSS
-      run: ossutil cp -rf . oss://wdbyte/
+      run: ossutil cp -rf . oss://wdbyte/ --exclude ".git*" --exclude "ossutil_*"
