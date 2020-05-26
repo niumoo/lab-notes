@@ -1,4 +1,4 @@
-package net.codingme.box.algorithm.leetcode;
+package net.codingme.leetcode;
 
 import java.util.HashMap;
 
@@ -18,7 +18,7 @@ public class L001_TwoSum {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
-        //int[] ints = new TwoSum().twoSum(nums, target);
+        // int[] ints = new TwoSum().twoSum(nums, target);
         int[] ints = new L001_TwoSum().twoSumByHash(nums, target);
         for (int anInt : ints) {
             System.out.println(anInt);
@@ -58,7 +58,7 @@ public class L001_TwoSum {
         for (int i = 0; i < nums.length; i++) {
             if (hashMap.containsKey(target - nums[i])) {
                 Integer value = hashMap.get(target - nums[i]);
-                return new int[]{value, i};
+                return new int[] {value, i};
             }
             hashMap.put(nums[i], i);
         }

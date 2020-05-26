@@ -1,4 +1,4 @@
-package net.codingme.box.algorithm.leetcode;
+package net.codingme.leetcode;
 
 /**
  * <p>

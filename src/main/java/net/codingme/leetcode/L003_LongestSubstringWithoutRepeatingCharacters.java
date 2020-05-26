@@ -1,4 +1,4 @@
-package net.codingme.box.algorithm.leetcode;
+package net.codingme.leetcode;
 
 import java.util.*;
 
@@ -29,8 +29,8 @@ import java.util.*;
  */
 public class L003_LongestSubstringWithoutRepeatingCharacters {
     public static void main(String[] args) {
-        //int length = lengthOfLongestSubstringByChar("abcabcbb");
-        //System.out.println(length);
+        // int length = lengthOfLongestSubstringByChar("abcabcbb");
+        // System.out.println(length);
     }
 
     /**
@@ -78,7 +78,7 @@ public class L003_LongestSubstringWithoutRepeatingCharacters {
             String tempStr = s.substring(start, i);
             // 缓存包含当前字符
             if (tempStr.contains(ch)) {
-                //找到字符去除
+                // 找到字符去除
                 int indexOf = tempStr.indexOf(ch);
                 start = indexOf + 1;
             }
