@@ -1,4 +1,4 @@
-package net.codingme.box.goodskill.service;
+package net.codingme.goodskill.service;
 
 /**
  * <p>

@@ -1,4 +1,4 @@
-package net.codingme.box;
+package net.codingme.goodskill;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

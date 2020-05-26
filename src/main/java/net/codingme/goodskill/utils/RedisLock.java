@@ -1,4 +1,4 @@
-package net.codingme.box.goodskill.utils;
+package net.codingme.goodskill.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

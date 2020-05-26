@@ -1,4 +1,4 @@
-package net.codingme.box.goodskill.utils;
+package net.codingme.goodskill.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
