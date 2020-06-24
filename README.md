@@ -1,4 +1,17 @@
-<h1 align="center"> Lab Notes (Java 有趣实验室) </h1>
+Java 有趣实验室，**原创文章每周更新**。公众号首发。技术文字在写的过程中难免会有纰漏，或者细节不够完善。大家发现问题，可以及时给我 PR 反馈，也可以去 [**公众号**](https://github.com/niumoo/JavaNotes#%E5%85%AC%E4%BC%97%E5%8F%B7) 给我留言，或者加我 [微信](https://github.com/niumoo/JavaNotes#联系我) 直接说明，我都会及时更正，哪怕是一个错别字。加油！奥利给！
+
+<h1 align="center"> Lab Notes </h1>
+<p align="center">
+<a href="#联系我" rel="nofollow"><img src="https://img.shields.io/badge/wechat-微信-9cf.svg" alt="wechat" data-canonical-src="https://img.shields.io/badge/wechat-微信-9cf.svg" style="max-width:100%;"></a>
+  <a href="#公众号"><img src="https://img.shields.io/badge/公众号-未读代码-success.svg" alt="公众号" data-canonical-src="https://img.shields.io/badge/公众号-未读代码-success.svg" style="max-width:100%;"></a>
+   <a href="https://niumoo.blog.csdn.net" rel="nofollow"><img src="https://img.shields.io/badge/csdn-CSDN-red.svg" alt="CSDN" data-canonical-src="https://img.shields.io/badge/csdn-CSDN-red.svg" style="max-width:100%;"></a>
+   <a href="https://juejin.im/user/5a62d481f265da3e2a0dac9b" rel="nofollow"><img src="https://img.shields.io/badge/juejin-掘金-blue.svg" alt="掘金" data-canonical-src="https://img.shields.io/badge/juejin-掘金-blue.svg" style="max-width:100%;"></a>
+   <a href="https://www.cnblogs.com/niumoo/" rel="nofollow"><img src="https://img.shields.io/badge/cnblogs-博客园-inactive.svg" alt="博客园" data-canonical-src="https://img.shields.io/badge/cnblogs-博客园-inactive.svg" style="max-width:100%;"></a>
+   <a href="https://www.zhihu.com/people/bpdwn" rel="nofollow"><img src="https://img.shields.io/badge/zhihu-知乎-blue.svg" alt="知乎" data-canonical-src="https://img.shields.io/badge/zhihu-知乎-blue.svg" style="max-width:100%;"></a>
+   <a href="https://www.wdbyte.com/" rel="nofollow"><img src="https://img.shields.io/badge/wdbyte-未读代码-yellow.svg" alt="未读代码" data-canonical-src="https://img.shields.io/badge/wdbyte-未读代码-yellow.svg" style="max-width:100%;"></a>
+</p>
+
+这个仓库主要是记录一些有趣有意思的东西，以**源码**为主，每一个源码基本上都会对应一篇文章说明，文章可以在我的[公众号](https://github.com/niumoo/JavaNotes#%E5%85%AC%E4%BC%97%E5%8F%B7)或者仓库 [Github:niumoo/JavaNotes](https://github.com/niumoo/JavaNotes) 查看。
 
 ### ☕ 实验室
 - [Java 热加载的手动实现](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/box/classloader)  
