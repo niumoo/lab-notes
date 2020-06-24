@@ -1,4 +1,4 @@
-package net.codingme.box.algorithm;
+package net.codingme.algorithm;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  * @author niujinpeng
  * @Date 2020/6/23 8:19
  */
-public class SpliString {
+public class StringSplit {
 
     public static void main(String[] args) {
         String content = "1234567890";
