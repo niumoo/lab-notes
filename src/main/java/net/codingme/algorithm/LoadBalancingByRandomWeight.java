@@ -1,4 +1,4 @@
-package net.codingme.box.algorithm;
+package net.codingme.algorithm;
 
 import java.util.*;
 
