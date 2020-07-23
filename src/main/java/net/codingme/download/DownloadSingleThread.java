@@ -17,8 +17,8 @@ public class DownloadSingleThread {
     private static int BYTE_SIZE = 1024 * 100;
 
     public static void main(String[] args) throws Exception {
-        // String url = "http://wppkg.baidupcs.com/issue/netdisk/yunguanjia/BaiduYunGuanjia_7.0.1.1.exe";
-        String url = "https://download-cf.jetbrains.com/datagrip/datagrip-2020.1.5.exe";
+         String url = "http://wppkg.baidupcs.com/issue/netdisk/yunguanjia/BaiduYunGuanjia_7.0.1.1.exe";
+//        String url = "https://download-cf.jetbrains.com/datagrip/datagrip-2020.1.5.exe";
         new DownloadSingleThread().download(url);
     }
 
@@ -41,6 +41,7 @@ public class DownloadSingleThread {
         } else {
             System.out.println("> 开始下载文件 " + httpFileName);
         }
+        long startTime = System.currentTimeMillis();
         System.out.println("> 开始下载时间 " + LocalDateTime.now());
         HttpURLConnection httpUrlConnection = HttpUtls.getHttpUrlConnection(url, localFileContentLength);
         // 获得输入流
@@ -74,7 +75,6 @@ public class DownloadSingleThread {
                     downloadSize = 0;
                 }
             }
-            System.out.println("\r\n> 已经下载完毕 " + httpFileName);
         } catch (FileNotFoundException e) {
             System.out.println("\n> ERROR! 要下载的文件路径不存在 " + url);
             return false;
@@ -84,6 +84,7 @@ public class DownloadSingleThread {
             return false;
         } finally {
             httpUrlConnection.disconnect();
+            System.out.println("> 文件下载完毕 " + httpFileName + "，本次下载耗时：" + (System.currentTimeMillis() - startTime) / 1000 + "s");
             System.out.println("> 结束下载时间 " + LocalDateTime.now());
         }
         return true;
