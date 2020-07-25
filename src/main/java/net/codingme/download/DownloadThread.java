@@ -23,65 +23,46 @@ public class DownloadThread implements Callable<Boolean> {
     // 下载开始位置
     private long startPos;
     // 要下载的文件区块大小
-    private Long needDownSize;
+    private Long endPos;
     // 标识多线程下载切分的第几部分
     private Integer part;
 
-    public DownloadThread(String url, long startPos, long needDownSize, Integer part) {
+    public DownloadThread(String url, long startPos, long endPos, Integer part) {
         this.url = url;
         this.startPos = startPos;
-        this.needDownSize = needDownSize;
+        this.endPos = endPos;
         this.part = part;
     }
 
     @Override
     public Boolean call() throws Exception {
+        if (url == null || url.trim() == "") {
+            throw new RuntimeException("> 下载路径不正确");
+        }
+        // 文件名
         String httpFileName = HttpUtls.getHttpFileName(url);
         if (part != null) {
-            httpFileName = httpFileName + ".temp" + part;
+            httpFileName = httpFileName + DownloadMain.FILE_TEMP_SUFFIX + part;
         }
+        // 本地文件大小
         Long localFileContentLength = FileUtils.getFileContentLength(httpFileName);
-        if (localFileContentLength >= needDownSize) {
-            System.out.println("> " + httpFileName + "已经下载完毕");
+        if (localFileContentLength >= endPos - startPos) {
+            System.out.println("> " + httpFileName + " 已经下载完毕，无需重复下载");
             return true;
         }
-        HttpURLConnection httpUrlConnection = HttpUtls.getHttpUrlConnection(url, startPos + localFileContentLength);
+        HttpURLConnection httpUrlConnection = HttpUtls.getHttpUrlConnection(url, startPos + localFileContentLength, endPos);
         // 获得输入流
         try (InputStream input = httpUrlConnection.getInputStream(); BufferedInputStream bis = new BufferedInputStream(input);
             RandomAccessFile oSavedFile = new RandomAccessFile(httpFileName, "rw")) {
             // 文件写入开始位置 localFileContentLength
             oSavedFile.seek(localFileContentLength);
-
-            Long downloadSize = localFileContentLength;
+            LogThread.DOWNLOAD_SIZE.addAndGet(localFileContentLength);
             byte[] buffer = new byte[BYTE_SIZE]; // 数组大小可根据文件大小设置a
             int len = -1;
-            double start = System.currentTimeMillis(), end = 0;
-            int logSize = 0;
             while ((len = bis.read(buffer)) != -1) { // 读到文件末尾则返回-1
                 oSavedFile.write(buffer, 0, len);
-                downloadSize += len;
-                // 要下载完毕，重新计算要下载的数据量
-                if (downloadSize + BYTE_SIZE >= needDownSize) {
-                    Long size = needDownSize - downloadSize;
-                    buffer = new byte[size.intValue()];
-                }
-                // 下载大小(100kb) / 下载时间 = 速度
-                end = System.currentTimeMillis();
-                Double speed = len / ((end - start) / 1000d) / 1024;
-                Double fileSize = FileUtils.getFileContentLength(httpFileName) / 1024d / 1024d;
-                String speedLog = "> 已经下载:" + String.format("%.2f", fileSize) + "mb,下载速度：" + speed.intValue() + "kb/s";
-                for (int i = 0; i < logSize; i++) {
-                    System.out.print("\b");
-                }
-                System.out.print(speedLog);
-                logSize = speedLog.length();
-                start = System.currentTimeMillis();
-                if (downloadSize >= needDownSize) {
-                    System.out.println("\r\n> " + httpFileName + "已经下载完毕");
-                    return true;
-                }
+                LogThread.DOWNLOAD_SIZE.addAndGet(len);
             }
-            System.out.println("\r\n> " + httpFileName + "已经下载完毕");
         } catch (FileNotFoundException e) {
             System.out.println("\n> ERROR! 要下载的文件路径不存在 " + url);
             return false;
@@ -91,7 +72,9 @@ public class DownloadThread implements Callable<Boolean> {
             return false;
         } finally {
             httpUrlConnection.disconnect();
+            LogThread.DOWNLOAD_FINISH.addAndGet(1);
         }
         return true;
     }
+
 }
