@@ -22,9 +22,13 @@ public class HttpUtls {
         return httpConnection;
     }
 
-    public static HttpURLConnection getHttpUrlConnection(String url, long size) throws IOException {
+    public static HttpURLConnection getHttpUrlConnection(String url, long start, Long end) throws IOException {
         HttpURLConnection httpUrlConnection = getHttpUrlConnection(url);
-        httpUrlConnection.setRequestProperty("RANGE", "bytes=" + size + "-");
+        if (end != null) {
+            httpUrlConnection.setRequestProperty("RANGE", "bytes=" + start + "-" + end + "/*");
+        } else {
+            httpUrlConnection.setRequestProperty("RANGE", "bytes=" + start + "-");
+        }
         return httpUrlConnection;
     }
 

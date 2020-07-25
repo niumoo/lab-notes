@@ -17,8 +17,8 @@ public class DownloadSingleThread {
     private static int BYTE_SIZE = 1024 * 100;
 
     public static void main(String[] args) throws Exception {
-         String url = "http://wppkg.baidupcs.com/issue/netdisk/yunguanjia/BaiduYunGuanjia_7.0.1.1.exe";
-//        String url = "https://download-cf.jetbrains.com/datagrip/datagrip-2020.1.5.exe";
+        String url = "http://wppkg.baidupcs.com/issue/netdisk/yunguanjia/BaiduYunGuanjia_7.0.1.1.exe";
+        // String url = "https://download-cf.jetbrains.com/datagrip/datagrip-2020.1.5.exe";
         new DownloadSingleThread().download(url);
     }
 
@@ -43,13 +43,12 @@ public class DownloadSingleThread {
         }
         long startTime = System.currentTimeMillis();
         System.out.println("> 开始下载时间 " + LocalDateTime.now());
-        HttpURLConnection httpUrlConnection = HttpUtls.getHttpUrlConnection(url, localFileContentLength);
+        HttpURLConnection httpUrlConnection = HttpUtls.getHttpUrlConnection(url, localFileContentLength, null);
         // 获得输入流
         try (InputStream input = httpUrlConnection.getInputStream(); BufferedInputStream bis = new BufferedInputStream(input);
             RandomAccessFile oSavedFile = new RandomAccessFile(httpFileName, "rw")) {
             // 文件写入开始位置 localFileContentLength
             oSavedFile.seek(localFileContentLength);
-
             byte[] buffer = new byte[BYTE_SIZE]; // 数组大小可根据文件大小设置a
             int len = -1;
             double start = System.currentTimeMillis(), end = 0, downloadSize = 0;
