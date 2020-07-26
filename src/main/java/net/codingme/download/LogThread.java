@@ -14,13 +14,10 @@ public class LogThread implements Callable<Boolean> {
 
     public static AtomicLong DOWNLOAD_SIZE = new AtomicLong();
     public static AtomicLong DOWNLOAD_FINISH = new AtomicLong();
-    public static long END_TIME = 0;
     private long httpFileContentLength;
-    private String url;
 
-    public LogThread(long httpFileContentLength, String url) {
+    public LogThread(long httpFileContentLength) {
         this.httpFileContentLength = httpFileContentLength;
-        this.url = url;
     }
 
     @Override

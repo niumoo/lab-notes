@@ -63,7 +63,7 @@ public class DownloadMain {
             Future<Boolean> future = executor.submit(downloadThread);
             futureList.add(future);
         }
-        LogThread logThread = new LogThread(httpFileContentLength, url);
+        LogThread logThread = new LogThread(httpFileContentLength);
         Future<Boolean> future = executor.submit(logThread);
         futureList.add(future);
         // 开始下载
@@ -109,18 +109,6 @@ public class DownloadMain {
         }
         System.out.println("> 临时文件清理完毕 " + fileName + FILE_TEMP_SUFFIX + "0-" + (DOWNLOAD_THREAD_NUM - 1));
         return true;
-    }
-
-    public static long checksumBufferedInputStream(String filepath) throws IOException {
-        InputStream inputStream = new BufferedInputStream(new FileInputStream(filepath));
-        CRC32 crc = new CRC32();
-        byte[] bytes = new byte[1024];
-        int cnt;
-        while ((cnt = inputStream.read(bytes)) != -1) {
-            crc.update(bytes, 0, cnt);
-        }
-        inputStream.close();
-        return crc.getValue();
     }
 
     /**
