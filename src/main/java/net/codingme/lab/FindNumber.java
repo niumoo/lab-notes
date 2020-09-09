@@ -1,6 +1,5 @@
-package net.codingme.box.lab;
+package net.codingme.lab;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 

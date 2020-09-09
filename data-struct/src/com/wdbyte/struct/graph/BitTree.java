@@ -1,7 +1,4 @@
-package net.codingme.box.structure.tree;
-
-import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
+package com.wdbyte.struct.graph;
 
 import java.util.Stack;
 
@@ -12,13 +9,43 @@ import java.util.Stack;
  * @Author niujinpeng
  * @Date 2019/4/10 10:33
  */
-@Data
-@Slf4j
 public class BitTree<T> {
     private BitTree root;
     private T value;
     private BitTree left;
     private BitTree right;
+
+    public BitTree getRoot() {
+        return root;
+    }
+
+    public void setRoot(BitTree root) {
+        this.root = root;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
+    }
+
+    public BitTree getLeft() {
+        return left;
+    }
+
+    public void setLeft(BitTree left) {
+        this.left = left;
+    }
+
+    public BitTree getRight() {
+        return right;
+    }
+
+    public void setRight(BitTree right) {
+        this.right = right;
+    }
 
     public BitTree(T value) {
         this.value = value;

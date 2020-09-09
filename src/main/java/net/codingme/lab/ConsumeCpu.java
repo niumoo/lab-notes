@@ -1,7 +1,6 @@
-package net.codingme.box.lab;
+package net.codingme.lab;
 
 import java.util.Arrays;
-import java.util.Map;
 import java.util.Random;
 
 /**

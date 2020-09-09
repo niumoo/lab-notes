@@ -1,4 +1,4 @@
-package net.codingme.box.lab;
+package net.codingme.lab;
 
 
 import java.awt.*;

@@ -1,9 +1,8 @@
-package net.codingme.box.lab;
+package net.codingme.algorithm;
 
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * <p>

@@ -13,18 +13,12 @@ package net.codingme.offer;
 public class Lab4_FindInTwoArray {
 
     public static void main(String[] args) {
-        solution(100);
+        solution(10);
     }
 
-    public static boolean solution(int target) {
-        // 初始化数组
-        int[] line1 = {1, 2, 3, 4, 5};
-        int[] line2 = {2, 3, 4, 5, 6};
-        int[] line3 = {5, 6, 7, 8, 9};
-        int[] line4 = {7, 8, 10, 14, 16};
-        int[] line5 = {9, 11, 13, 15, 18};
-        int[][] arr = {line1, line2, line3, line4, line5};
 
+    public static boolean solution(int target) {
+        int[][] arr = getArr();
         int height = arr[0].length - 1;
         int width = 0;
         int value = arr[width][height];
@@ -42,5 +36,16 @@ public class Lab4_FindInTwoArray {
         }
         System.out.println("存在于[" + width + "][" + height + "]");
         return true;
+    }
+
+    public static int[][] getArr(){
+        // 初始化数组
+        int[] line1 = {1, 2, 3, 4, 5};
+        int[] line2 = {2, 3, 4, 5, 6};
+        int[] line3 = {5, 6, 7, 8, 9};
+        int[] line4 = {7, 8, 10, 14, 16};
+        int[] line5 = {9, 11, 13, 15, 18};
+        int[][] arr = {line1, line2, line3, line4, line5};
+        return arr;
     }
 }
