@@ -11,7 +11,7 @@ Java 有趣实验室，**原创文章每周更新**。公众号首发。技术�
    <a href="https://www.wdbyte.com/" rel="nofollow"><img src="https://img.shields.io/badge/wdbyte-未读代码-yellow.svg" alt="未读代码" data-canonical-src="https://img.shields.io/badge/wdbyte-未读代码-yellow.svg" style="max-width:100%;"></a>
 </p>
 
-这个仓库主要是记录一些有趣有意思的东西，以**源码**为主，每一个源码基本上都会对应一篇文章说明，文章可以在我的[公众号](https://github.com/niumoo/JavaNotes#%E5%85%AC%E4%BC%97%E5%8F%B7)或者仓库 [Github:niumoo/JavaNotes](https://github.com/niumoo/JavaNotes) 查看。
+这个仓库主要是记录一些有趣有意思的东西，以**源码**为主，每一个源码基本上都会对应一篇文章说明，文章可以在我的 [公众号](https://github.com/niumoo/JavaNotes#%E5%85%AC%E4%BC%97%E5%8F%B7) 或者仓库 [Github:niumoo/JavaNotes](https://github.com/niumoo/JavaNotes) 查看。
 
 ### ☕ 实验室
 - [Java 热加载的手动实现](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/box/classloader)  
@@ -19,7 +19,7 @@ Java 有趣实验室，**原创文章每周更新**。公众号首发。技术�
 - [Java 同步非阻塞模式(Non-Blocking IO)](https://github.com/niumoo/lab-notes/tree/master/src/main/java/net/codingme/box/io/nio)  
 - [Java 多路复用模式(Selector Non-Blocking IO)](https://github.com/niumoo/lab-notes/tree/master/src/main/java/net/codingme/box/io/jdknio)  
 - [Java 简单的秒杀系统，Redis 锁](https://github.com/niumoo/lab-notes/tree/master/src/main/java/net/codingme/box/goodskill)  
-- [Java 图片转字符图案](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/lab/GeneratorTextImage.java)  
+- [Java 图片转字符图案](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/box/lab/GeneratorTextImage.java)  
 - [Java 性能分析工具使用案例 - Arthas](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/arthas)  
 - [Java 性能分析工具使用案例 - async-profiler](https://github.com/niumoo/lab-notes/blob/master/src/main/java/net/codingme/arthas/HotCode.java)
 - [常见的负载均衡算法](https://github.com/niumoo/lab-notes/tree/master/src/main/java/net/codingme/algorithm)  
