@@ -23,6 +23,7 @@ Java 有趣实验室，**原创文章每周更新**。公众号首发。技术�
 - [Java 性能分析工具使用案例 - Arthas](https://github.com/niumoo/lab-notes/blob/master/web-arthas/)  
 - [Java 性能分析工具使用案例 - async-profiler](https://github.com/niumoo/lab-notes/blob/master/web-arthas/src/main/java/com/wdbyte/arthas/HotCode.java)
 - [常见的负载均衡算法](https://github.com/niumoo/lab-notes/blob/master/java-algorithm/src/main/java/com/wdbyte/other/)  
+- [三种并发修改异常的绕过方式](https://github.com/niumoo/lab-notes/blob/master/java-lab/src/main/java/com/wdbyte/lab/jdk/ModCountExceptionDemo.java)  
 
 ### 🍭 剑指Offer算法题目
 - [剑指 Offer 002：单例模式](https://github.com/niumoo/lab-notes/blob/master/java-algorithm/src/main/java/com/wdbyte/offer/)
