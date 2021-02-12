@@ -10,7 +10,7 @@ import java.util.concurrent.Phaser;
 import org.junit.Test;
 
 /**
- * 并发修改异常的跳过方式
+ * 并发修改异常的绕过方式
  *
  * @author darcy
  * @date 2021/02/11
