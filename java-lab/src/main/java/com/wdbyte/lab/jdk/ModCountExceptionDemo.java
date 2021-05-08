@@ -12,7 +12,7 @@ import org.junit.Test;
 /**
  * 并发修改异常的绕过方式
  *
- * @author darcy
+ * @author github.com/niumoo
  * @date 2021/02/11
  */
 public class ModCountExceptionDemo {
