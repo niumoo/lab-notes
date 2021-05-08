@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string
  *
- * @author darcy
+ * @author github.com/niumoo
  * @date 2021/03/09
  */
 public class Leetcode1047 {
