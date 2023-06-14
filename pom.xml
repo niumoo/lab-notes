@@ -21,7 +21,7 @@
         <commons-lang3.version>3.8.1</commons-lang3.version>
         <lombok.version>1.18.4</lombok.version>
         <logback.version>1.2.3</logback.version>
-        <guava.version>29.0-jre</guava.version>
+        <guava.version>32.0.0-jre</guava.version>
         <junit4.version>4.13.1</junit4.version>
     </properties>
 
